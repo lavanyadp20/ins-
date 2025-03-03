@@ -169,12 +169,17 @@ information
 ### DES Cipher:
 sh
 python3 des_cipher.py
+
 *Input:*
 
 Enter a string: attack
+
 *Binary Conversion*:
+
 01001000 01100101 01101100 01101100 01101111
+
 *Generated Keys*:
+
 Key  1  =  0011000111101011000001111010011000
  Key  2  =  0001110001110101100000111001100000
  Key  3  =  1110011101010000001111010011100000
