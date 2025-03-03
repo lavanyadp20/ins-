@@ -33,9 +33,33 @@ This repository contains implementations of classical encryption techniques, inc
   - Implements character-wise modulo arithmetic
 - *Implementation*: vigenere_cipher.py
 - *Complexity: **O(n)* for encryption and decryption
+### 4. Feistel Cipher
+-*Type*: Block Cipher (Feistel Network)
+-*Key*: Fixed key (can be any length suitable for the algorithm)
+-*Encryption Process*:
+   -Divides the plaintext into two halves.
+   -Performs multiple rounds of substitution and permutation with the round key.
+   -After several rounds, the halves are swapped to produce the final ciphertext.
+-*Implementation*: feistel_cipher.py
+-*Complexity:** O(n)* per round for encryption and decryption
+### 5. DES (Data Encryption Standard)
+-*Type*: Block Cipher (Feistel Network)
+-*Key*: 56-bit key (with parity bits)
+-*Encryption Process*:
+   -Data is divided into 64-bit blocks.
+   -16 rounds of permutation and substitution, based on the round key. 
+   -Each round involves expansion, substitution (using S-boxes), and permutation.
+   - Implementation: des_cipher.py
+-*Complexity:** O(16n)*, where n is the block size (fixed at 64 bits)
 
-
-
+### 6. Monoalphabetic Substitution Cipher
+-*Type*: Substitution Cipher
+-*Key*: A substitution alphabet mapping
+-*Encryption Process*:
+   -Each letter in the plaintext is replaced with a corresponding letter in the ciphertext alphabet.
+   -The mapping is a simple one-to-one relationship for letters.
+   -Implementation: monoalphabetic_cipher.py
+-*Complexity:** O(n)* for encryption and decryption
 
 ## How to Run the Code
 
@@ -120,6 +144,17 @@ Key: KEY
 
 Ciphertext: RIJVS
 Decrypted: HELLO
+### Example Usage (Feistel Cipher):
+bash
+python3 feistel_cipher.py
+*Input:*
+
+Enter the plaintext: STRING
+Enter the key: 12
+*Output:*
+Encrypted Message: xxxxxxxx
+Decrypted Message: STRING
+
 
 
 
