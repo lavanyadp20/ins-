@@ -35,20 +35,14 @@ This repository contains implementations of classical encryption techniques, inc
 - *Complexity: **O(n)* for encryption and decryption
   
 ### 4. Feistel Cipher
--*Type*: Block Cipher (Feistel Network)      
-
--*Key*: Fixed key (can be any length suitable for the algorithm)
-
--*Encryption Process*:
-  -Divides the plaintext into two halves.
-  
-  -Performs multiple rounds of substitution and permutation with the round key.
-  
-  -After several rounds, the halves are swapped to produce the final ciphertext.
-  
--*Implementation*: feistel_cipher.py
-
--*Complexity:** O(n)* per round for encryption and decryption
+- *Type*: Block Cipher (Feistel Network)      
+- *Key*: Fixed key (can be any length suitable for the algorithm)
+- *Encryption Process*:
+  - Divides the plaintext into two halves.
+  - Performs multiple rounds of substitution and permutation with the round key.
+  - After several rounds, the halves are swapped to produce the final ciphertext.
+ - *Implementation*: feistel_cipher.py
+- *Complexity:** O(n)* per round for encryption and decryption
 
 
 ### 5. DES (Data Encryption Standard)
