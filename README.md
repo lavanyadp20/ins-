@@ -46,23 +46,23 @@ This repository contains implementations of classical encryption techniques, inc
 
 
 ### 5. DES (Data Encryption Standard)
--*Type*: Block Cipher (Feistel Network)
--*Key*: 56-bit key (with parity bits)
--*Encryption Process*:
-   -Data is divided into 64-bit blocks.
-   -16 rounds of permutation and substitution, based on the round key. 
-   -Each round involves expansion, substitution (using S-boxes), and permutation.
-   - Implementation: des_cipher.py
--*Complexity:** O(16n)*, where n is the block size (fixed at 64 bits)
+- *Type*: Block Cipher (Feistel Network)
+- *Key*: 56-bit key (with parity bits)
+- *Encryption Process*:
+   - Data is divided into 64-bit blocks.
+   - 16 rounds of permutation and substitution, based on the round key. 
+   - Each round involves expansion, substitution (using S-boxes), and permutation.
+   - *Implementation*: des_cipher.py
+- *Complexity:** O(16n)*, where n is the block size (fixed at 64 bits)
 
 ### 6. Monoalphabetic Substitution Cipher
--*Type*: Substitution Cipher
--*Key*: A substitution alphabet mapping
--*Encryption Process*:
-   -Each letter in the plaintext is replaced with a corresponding letter in the ciphertext alphabet.
-   -The mapping is a simple one-to-one relationship for letters.
-   -Implementation: monoalphabetic_cipher.py
--*Complexity:** O(n)* for encryption and decryption
+- *Type*: Substitution Cipher
+- *Key*: A substitution alphabet mapping
+- *Encryption Process*:
+   - Each letter in the plaintext is replaced with a corresponding letter in the ciphertext alphabet.
+   - The mapping is a simple one-to-one relationship for letters.
+   - *Implementation*: monoalphabetic_cipher.py
+- *Complexity:** O(n)* for encryption and decryption
 
 ## How to Run the Code
 
@@ -147,8 +147,8 @@ Key: KEY
 
 Ciphertext: RIJVS
 Decrypted: HELLO
-### Example Usage (Feistel Cipher):
-bash
+### Feistel Cipher
+sh
 python3 feistel_cipher.py
 
 *Input:*
@@ -158,8 +158,36 @@ Enter the key: 12
 
 *Output:*
 
-Encrypted Message: xxxxxxxx
 Decrypted Message: STRING
+
+### DES Cipher:
+sh
+python3 des_cipher.py
+*Input:*
+
+
+Enter the plaintext: ATTACK
+Enter the key: 12345678
+
+*Output:*
+
+
+Decrypted Message: ATTACK
+
+### Monoalphabetic Cipher:
+
+python3 monoalphabetic_cipher.py
+
+*Input:*
+
+
+Enter the plaintext: INFORMATIONSCIENCE
+Enter the key: QAZWSXEDCRFVTGBYHNUJMIKOLP
+
+*Output:*
+
+
+Decrypted Message: INFORMATIONSCIENCE
 
 
 
@@ -171,6 +199,9 @@ Decrypted Message: STRING
 | Playfair    | Digraph Substitution         | 5x5 Key Matrix  | O(n)                 | More secure than simple monoalphabetic | Still vulnerable to digraph analysis |
 | Hill        | Matrix-Based Block Cipher    | n x n Matrix    | O(n³)                 | Stronger encryption, uses algebra | Requires invertible key matrix |
 | Vigenère    | Polyalphabetic Substitution  | Variable Length | O(n)                  | Resists simple frequency analysis | Still breakable with Kasiski method |
+|Feistel Cipher|	Block Cipher (Feistel)	     |Variable	       | O(n)                 | per round	Flexible, suitable for block ciphers|	Weak if rounds are insufficient|
+|DES	Block Cipher |(Feistel)	56 bits	|O(16n)	|Well-established widely studied|	Vulnerable to brute force (short key)|
+|Monoalphabetic|	Substitution Cipher	26 letters|	O(n)	|Simple to implement and understand|	Easily broken via frequency analysis|
 
 
 ## Future Improvements
