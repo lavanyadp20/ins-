@@ -153,26 +153,33 @@ python3 feistel_cipher.py
 
 *Input:*
 
-Enter the plaintext: STRING
-Enter the key: 12
+Enter a string : information
+Enter a key : ise
 
 *Output:*
 
-Decrypted Message: STRING
+
+
+Result :  0110100101101110011001100110111101110010011011010110000101110100011010010110111101101110
+
+ key :0110100101101110011001100110111101110010011011010110000101110100011010010110111101101110
+ 
+information
 
 ### DES Cipher:
 sh
 python3 des_cipher.py
 *Input:*
 
-
-Enter the plaintext: ATTACK
-Enter the key: 12345678
-
-*Output:*
-
-
-Decrypted Message: ATTACK
+Enter a string: attack
+*Binary Conversion*:
+01001000 01100101 01101100 01101100 01101111
+*Generated Keys*:
+Key  1  =  0011000111101011000001111010011000
+ Key  2  =  0001110001110101100000111001100000
+ Key  3  =  1110011101010000001111010011100000
+   ….
+Key  8  =  0001111101100000000001110100000000
 
 ### Monoalphabetic Cipher:
 
@@ -181,8 +188,9 @@ python3 monoalphabetic_cipher.py
 *Input:*
 
 
-Enter the plaintext: INFORMATIONSCIENCE
-Enter the key: QAZWSXEDCRFVTGBYHNUJMIKOLP
+Plaintext: information science
+Encrypted text: vmslizngvlm hpvrmpr
+
 
 *Output:*
 
