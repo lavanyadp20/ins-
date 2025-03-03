@@ -34,16 +34,7 @@ This repository contains implementations of classical encryption techniques, inc
 - *Implementation*: vigenere_cipher.py
 - *Complexity: **O(n)* for encryption and decryption
 
-### 4. Hybrid Cipher (AES + Transposition)
-- *Type*: Combination of Substitution and Transposition
-- *Key*: 128-bit AES key
-- *Encryption Process*:
-  - Encrypts with AES (Electronic Codebook Mode)
-  - Applies transposition based on a fixed seed
-- *Implementation*: hybrid_cipher.py
-- *Complexity*:
-  - *AES Encryption: **O(n)*
-  - *Transposition: **O(n log n)* (sorting-based shuffling)
+
 
 
 ## How to Run the Code
@@ -131,19 +122,6 @@ Ciphertext: RIJVS
 Decrypted: HELLO
 
 
-### Hybrid Cipher (AES + Transposition)
-sh
-python3 hybrid_cipher.py
-
-*Input:*
-
-Plaintext: HELLO WORLD
-Key: thisis128bitkey
-
-*Output:*
-
-Encrypted: [Hexadecimal String]
-Decrypted: HELLO WORLD
 
 
 ## Comparative Analysis
@@ -152,11 +130,11 @@ Decrypted: HELLO WORLD
 | Playfair    | Digraph Substitution         | 5x5 Key Matrix  | O(n)                 | More secure than simple monoalphabetic | Still vulnerable to digraph analysis |
 | Hill        | Matrix-Based Block Cipher    | n x n Matrix    | O(n³)                 | Stronger encryption, uses algebra | Requires invertible key matrix |
 | Vigenère    | Polyalphabetic Substitution  | Variable Length | O(n)                  | Resists simple frequency analysis | Still breakable with Kasiski method |
-| Hybrid (AES+Transposition) | Block Cipher + Shuffling | 128-bit Key  | O(n) AES, O(n log n) Transposition | Strong cryptographic security | Computationally heavier |
+
 
 ## Future Improvements
 - Implement *automated cryptanalysis tools* to break weak ciphers.
 - Enhance *key management* for Hill and Playfair ciphers.
-- Extend hybrid cipher with *CBC mode encryption* for AES security.
+
 
 For any issues or contributions, feel free to submit a pull request or open an issue in the repository.# ins-
