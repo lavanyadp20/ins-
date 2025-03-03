@@ -200,8 +200,8 @@ Decrypted Message: INFORMATIONSCIENCE
 | Hill        | Matrix-Based Block Cipher    | n x n Matrix    | O(n³)                 | Stronger encryption, uses algebra | Requires invertible key matrix |
 | Vigenère    | Polyalphabetic Substitution  | Variable Length | O(n)                  | Resists simple frequency analysis | Still breakable with Kasiski method |
 |Feistel Cipher|	Block Cipher (Feistel)	     |Variable	       | O(n)                 | per round	Flexible, suitable for block ciphers|	Weak if rounds are insufficient|
-|DES	Block Cipher |(Feistel)	56 bits	|O(16n)	|Well-established widely studied|	Vulnerable to brute force (short key)|
-|Monoalphabetic|	Substitution Cipher	26 letters|	O(n)	|Simple to implement and understand|	Easily broken via frequency analysis|
+|DES	Block Cipher |(Feistel)	|56 bits	|O(16n)	|Well-established widely studied|	Vulnerable to brute force (short key)|
+|Monoalphabetic|	Substitution Cipher|	26 letters|	O(n)	|Simple to implement and understand|	Easily broken via frequency analysis|
 
 
 ## Future Improvements
